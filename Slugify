@@ -1,0 +1,8 @@
+title = input('enter your title here: ')
+def slugify(text) :
+    slug = text.strip().lower().replace(' ','-')
+    while '--' in slug :
+        slug = slug.replace('--','-')
+    return slug
+slug  = slugify(title)
+print(slug)
